@@ -1,3 +1,3 @@
-module github.com/shulzhenkodanylo/albumpinforrest
+module github.com/shulzhenkodanylo/pinforrest
 
 go 1.22.2

@@ -12,21 +12,21 @@ func home(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	w.Write([]byte("Hello from AlbumPinForrest"))
+	w.Write([]byte("Hello from PinForrest"))
 }
 
-func albumPinView(w http.ResponseWriter, r *http.Request) {
+func pinView(w http.ResponseWriter, r *http.Request) {
 	id, err := strconv.Atoi(r.URL.Query().Get("id"))
 	if err != nil || id < 1 {
 		http.NotFound(w, r)
 		return
 	}
 
-	fmt.Fprintf(w, "Display a specific album with ID %d...", id)
+	fmt.Fprintf(w, "Display a specific pin with ID %d...", id)
 
 }
 
-func albumPinCreate(w http.ResponseWriter, r *http.Request) {
+func pinCreate(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		w.Header().Set("Allow", "POST")
 
